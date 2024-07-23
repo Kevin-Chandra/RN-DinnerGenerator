@@ -16,7 +16,6 @@ import {
 } from "@core/services/SearchDrink/searchDrinkSlice";
 
 const DrinkListingScreen = () => {
-  // const { data, isLoading, error } = useFetch(`filter.php`, { i: "gin" });
   const { searchQuery, drinks, isLoading, errorMessage } = useSelector(
     (state: RootState) => state.rootReducer.searchDrink
   );
@@ -24,7 +23,7 @@ const DrinkListingScreen = () => {
   return (
     <View className="flex">
       <TextInput
-        className="border-cyan-400 p-2 border-2"
+        className=""
         onChangeText={(text) => {
           dispatch(searchQueryChanged(text));
         }}

@@ -8,10 +8,10 @@ const DrinkListingCard = ({ drink }: { drink: Drink }) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      className="w-max -inset-16"
+      className="m-2 p-4 h-16 rounded-lg bg-slate-200"
       onPress={() => handleNavigation(navigation, drink.idDrink)}
     >
-      <Text>{drink.strDrink}</Text>
+      <Text className="inline-block align-center">{drink.strDrink}</Text>
     </TouchableOpacity>
   );
 };
